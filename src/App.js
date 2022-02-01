@@ -5,24 +5,25 @@ import {TestComp1} from './components/TestComp1'
 import {Header} from './layout/Header'
 import {Footer} from './layout/Footer'
 import { Routes, Route, Link } from "react-router-dom";
+import Home from './layout/Home/Home';
+import About from './layout/About/About';
+import Coupons from './layout/Coupons/Coupons';
+import Login from './layout/Login/Login';
 
 
-const About = () =>{
-  return (<div>About</div>)
-}
-const Coupons = () =>{
-  return (<div>Coupons</div>)
-}
-const Login = () =>{
-  return (<div>Login</div>)
-}
+
+
 
 function App() {
   // const [counter, serCounter] = useState(0);
 
   return (
     <div className="App">
+    <Home/>
+    <About/>
+    <Coupons/>
     <Header/>
+    <Login/>
     <main>
        <Routes>
         <Route path="/" element={<Home />} />
